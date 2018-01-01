@@ -1,0 +1,13 @@
+<ons-page>
+        <div ng-class="bg" class="height-100p full-width relative-layout" ng-controller="CategoryCtrl">
+            <section class="centerInParent primary top5">
+                <div 
+                    ng-repeat="item in categories"
+                    class="width-49p height-25p theme margin-top-0-1 relative-layout {{ $index % 2 == 0 ? 'float-right' : 'float-left' }}" 
+                    ng-click="category.selected = item; ons.navigator.pushPage('view/order-observe.html');">
+                    <span class="bold centerInParent">{{ item.name }}</span>
+                </div> 
+                <div class="clear-float"></div>
+            </section>
+        </div>
+</ons-page>

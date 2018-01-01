@@ -1,0 +1,13 @@
+<ons-page>
+        <div ng-class="bg" class="height-100p full-width relative-layout" ng-controller="SalesCtrl">
+            
+            <ons-list>
+                <ons-list-item
+                    ng-repeat="item in dates">
+                    <h3>{{ item.saledate | readableDate }}</h3>
+                    <div>{{ item.profit + '€'}}</div>
+                </ons-list-item>
+            </ons-list>
+                
+        </div>
+</ons-page>

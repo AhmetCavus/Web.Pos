@@ -1,0 +1,131 @@
+[
+  {
+    "id":"1",
+    "cid":"3",
+    "name":"Döner",
+    "price":3.0,
+    "content":[
+        "Tavuk","Dana","Komple","Salatasız","Acılı","Cacıklı","Soğanlı"
+    ],
+    "option": [
+		"Tabak","Dürüm","Ekmek Arası"
+    ]
+   },
+   {
+    "id":"2",
+    "cid":"1",
+    "name":"Adana Kebap",
+    "price":3.5,
+    "content":[
+		"Komple","Salatasız","Acılı","Cacıklı","Soğanlı"
+    ],
+    "option": [
+		"Tabak","Dürüm","Ekmek Arası"
+    ]
+   },
+   {
+    "id":"3",
+    "cid":"",
+    "name":"Urfa Kebap",
+    "price":3.5,
+    "content":[
+		"Komple","Salatasız","Acılı","Cacıklı","Soğanlı"
+    ],
+    "option": [
+		"Tabak","Dürüm","Ekmek Arası"
+    ]
+   },
+   {
+    "id":"4",
+    "name":"Şiş Tavuk",
+    "price":3.5,
+    "content":[
+		"Komple","Salatasız","Acılı","Cacıklı","Soğanlı"
+    ],
+    "option": [
+		"Tabak","Dürüm","Ekmek Arası"
+    ]
+   },
+   {
+    "id":"5",
+    "name":"Köfte",
+    "price":3.5,
+    "content":[
+		"İnegöl","Akçaabat","Komple","Salatasız","Acılı","Cacıklı","Soğanlı"
+    ],
+    "option": [
+		"Tabak","Dürüm","Ekmek Arası"
+    ]
+   },
+   {
+    "id":"6",
+    "name":"Lahmacun",
+    "price":3.0,
+    "content":[
+		"Komple","Salatasız","Acılı","Cacıklı","Soğanlı"
+    ],
+    "option": [
+		"Tabak","Dürüm","Ekmek Arası"
+    ]
+   },	
+   {
+    "id":"7",
+    "name":"Tavuk Bütün",
+    "price":3.0,
+    "content":[
+		"Komple","Salatasız","Acılı","Cacıklı","Soğanlı"
+    ],
+    "option": [
+		"Tabak","Ekmek Arası"
+    ]
+   },	
+   {
+    "id":"8",
+    "name":"Tavuk Yarım",
+    "price":3.0,
+    "content":[
+		"Komple","Salatasız","Acılı","Cacıklı","Soğanlı"
+    ],
+    "option": [
+		"Tabak","Ekmek Arasi"
+    ]
+   },
+   {
+    "id":"9",
+    "name":"Balık",
+    "price":3.0,
+    "content":[
+		"Komple","Salatasız","Soğanlı"
+    ],
+    "option": [
+		"Tabak","Ekmek Arası"
+    ]
+   },
+   {
+    "id":"10",
+    "name":"Çorba",
+    "price":2.5,
+    "content":[
+		"Mercimek","Tavuk","Yahni","Ezo Gelin","Tarhana","Acılı","Sirkeli"
+    ],
+    "option": []
+   },	
+   {
+    "id":"11",
+    "name":"Patetes Kızartması Büyük",
+    "price":3.0,
+    "content":[
+		"Mayonez","Ketçap","Acılı"
+    ],
+    "option": []
+   },
+   {
+    "id":"12",
+    "name":"Patetes Kızartması Küçük",
+    "price":3.0,
+    "content":[
+		"Mayonez","Ketçap","Acılı"
+    ],
+    "option": []
+   }		
+]

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the array values after the split.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var date = "2014-04-30 21:31:14";
+    var tmp = date.split(" ");
+    var d = tmp[0].split("-");
+    var t = tmp[1].split(":");
+    var year = parseInt(d[0]);
+    var month = parseInt(d[1])-1;
+    var day = parseInt(d[2]);
+    var hour = parseInt(t[0]);
+    var minute = parseInt(t[1]);
+    var second = parseInt(t[2]);
+    d = new Date(year,month,day,hour,minute,second,0);
+    var now = Date.now();
+    var dLong = d.getTime();
+    var res = now - dLong;
+    var time = { hour: 0, minute: 0, second: 0 };
+    time.hour = parseInt((res / 1000 / 60 / 60) % 60);
+    time.minute = parseInt((res / 1000 / 60) % 60);
+    time.second = parseInt((res / 1000) % 60);
+    document.getElementById("demo").innerHTML = "Gecen zaman " + time.hour + "Saat " + time.minute + " Dakika " + time.second + " Saniye önce";
+}
+</script>
+
+</body>
+</html>

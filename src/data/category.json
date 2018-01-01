@@ -1,0 +1,26 @@
+[
+  {
+    "id":"1",
+    "name":"Adana Siş Pirzola"
+   },
+   {
+    "id":"2",
+    "name":"Tavuk Balık"
+   },		
+   {
+    "id":"3",
+    "name":"Döner Pommes"
+   },
+   {
+    "id":"4",
+    "name":"Köfte"
+   },
+   {
+    "id":"5",
+    "name":"Çorba"
+   },
+   {
+    "id":"6",
+    "name":"İçecekler"
+   }
+]

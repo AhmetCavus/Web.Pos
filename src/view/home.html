@@ -1,0 +1,74 @@
+<ons-page>
+    <ons-navigator 
+        hide-toolbar="false">
+        
+        <div ng-class="bg" class="height-100p full-width relative-layout" ng-controller="HomeCtrl">
+
+            <div class="top0-1"></div>
+            
+                <section class="height-20p top10">
+                    <div 
+                        class="width-49p full-height theme padding5 tile float-left"
+                        nimation="zoom-out" 
+                        type="large"
+                        should-spin="{{ loading }}"
+                        ng-click="ons.navigator.pushPage('view/order.html');">
+                        <div class="centerInParent">
+                            <ons-icon class="fa-2x white" icon="shopping-cart"></ons-icon>
+                            <div class="font-xSmall ternary padding5">
+                                <h3 class="white font-large">Siparisler</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="width-49p full-height theme padding5 tile float-right"
+                        animation="zoom-out" 
+                        type="large"
+                        should-spin="{{ loading }}"
+                        ng-click="ons.navigator.pushPage('view/category.html');">
+                        <div class="centerInParent">
+                            <ons-icon class="fa-2x white" icon="table"></ons-icon>
+                            <div class="font-xSmall ternary padding5">
+                                <h3 class="white font-large">Tezgahlar</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear-float"></div>
+                </section>
+        
+            <div class="top0-1-5"></div>
+            
+                <section class="height-20p">
+                    <div
+                        class="width-49p full-height theme padding5 tile float-right"
+                        animation="zoom-out" 
+                        type="large"
+                        should-spin="{{ loading }}"
+                        ng-click="onCreateProduct();">
+                        <div class="centerInParent">
+                            <ons-icon class="fa-2x white" icon="plus"></ons-icon>
+                            <div class="font-xSmall ternary padding5">
+                                <h3 class="white font-large">Ürün ekle</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="width-49p full-height theme padding5 tile float-left"
+                        nimation="zoom-out" 
+                        type="large"
+                        should-spin="{{ loading }}"
+                        ng-click="ons.navigator.pushPage('view/sales.html');">
+                        <div class="centerInParent">
+                            <ons-icon class="fa-2x white" icon="money"></ons-icon>
+                            <div class="font-xSmall ternary padding5">
+                                <h3 class="white font-large">Satışlar</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear-float"></div>
+                </section>
+
+        <div class="top0-1-5"></div>
+    </div>
+    </ons-navigator>
+</ons-page>

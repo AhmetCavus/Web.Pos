@@ -1,0 +1,7 @@
+{
+    "development":false,
+    "langs": [
+        {"code": "tr", "name": "Türkce", "id": 0}, 
+        {"code": "en", "name": "English", "id": 1}, 
+        {"code": "de", "name": "Deutsch", "id": 2}]
+}

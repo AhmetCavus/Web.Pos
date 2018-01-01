@@ -1,0 +1,42 @@
+<ons-page>
+    <div ng-class="bg" class=" bgColorLight height-100p full-width relative-layout" ng-controller="ImprintCtrl">
+
+        <section class="primary">
+            <div class="width-space top1">
+                <div>
+                    <img alt="" src="data/logo.png" class="top0-4"/>
+                </div>
+                <div class="full-width top1">
+                     <h3 class="top0-4 primary" >{{cinar.company}}</h3>
+                     <span class="font-small gray">{{cinar.subtitle}}</span>
+                </div>
+                <hr class="top1">
+                <div class="full-width top1">
+                    <h3 class="primary">Adres:</h3>
+                    <address>
+                        <div class="font-small gray">{{cinar.adress}}</div>
+                        <div class="font-small gray">{{cinar.postal}} / {{cinar.city}}</div>
+                        <div class="font-small gray">{{cinar.land}}</div>
+                    </address>
+                    
+                </div>
+                <hr class="top1">
+                
+                <div class="full-width top1">
+                    <h3 class="primary">İletişim:</h3>
+                    <div class="top0-4 font-small gray">{{cinar.ansprechpartner}}</div>
+                    <div class="top0-4 font-small gray">E-Mail:<a href="mailto:info@cinarsoft.net"> {{cinar.epost}}</a></div>
+                </div>
+                <hr class="top1">
+<!--                <a class="inline top1" href="">
+                    <span id="setAudio" class="fa-3x fa fa-phone theme"></span>
+                    <div>{{ lang.call }}</div>
+                </a>-->
+                <div class="inline top1" onclick='navigator.app.loadUrl("http://cinarsoft.net", {openExternal : true});'>
+                    <span class="fa-3x fa fa-globe theme"></span>
+                    <div>{{ lang.web }}</div>
+                </div>
+                <div class="clear-float"></div>
+
+        </section>
+</ons-page>

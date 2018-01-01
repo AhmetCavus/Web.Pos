@@ -1,0 +1,25 @@
+<aside class="avgrund-popup">
+    <div class="full-width full-height padding5 relative-layout">
+        <div class="centerInParent">
+            <ons-button 
+                class="float-left padding10"
+                style="width: 48%;"
+                type="large"
+                capture="camera"
+                ng-click="onCameraClick();">
+                <ons-icon class="fa fa-3x" icon="camera"></ons-icon>
+            </ons-button>	
+
+            <div class="float-left" style="width: 1%;"></div>
+
+            <ons-button 
+                class="float-right padding10"
+                style="width: 48%;"
+                type="large"
+                ng-click="closePopup();">
+                <ons-icon class="fa fa-3x" icon="file"></ons-icon>
+                <input class="absolute top-left" type="file" onchange="angular.element(this).scope().onImageSelected();" id="fInput" accept="image/*" name="fInput" style="width: 100em; top: -0.7em; left: -4em; font-size: 7em; opacity: 0; filter:alpha(opacity: 0);"/>
+            </ons-button>		
+        </div>
+    </div>
+</aside>

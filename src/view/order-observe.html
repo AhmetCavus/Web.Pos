@@ -1,0 +1,33 @@
+<ons-page>
+    <ons-scroller>
+        <div ng-class="bg" class="height-100p full-width relative-layout" id="orderId" ng-controller="ObserveCtrl">
+        <section class="primary top5 full-width float-right">
+            <h3>Siparişler</h3>
+            <div 
+                ng-repeat="item in orders | orderBy : 'date' : -1 "
+                class="font-large bgPrimary cSecondary padding20 margin-top-0-1 full-width left">
+                <div class="bold">{{ item.ordercount }} tane {{ item.product }}</div>
+                <div class="bold">{{ time = (item.date | dateToTime); time.hour + " saat " + time.minute + " dakika önce"; }}</div>
+                <div class="bold">{{ item.contents }}</div>
+                <div class="bold">{{ item.options }} Paket {{ item.packet == 1 ? "yapilacak" : "yapilmayacak"}}</div>
+                <div class="bold">{{ "Sipariş veren: " + item.orderer }}</div>
+<!--                <ons-button  
+                    type="cta" 
+                    should-spin="loading"
+                    class="top-1 width-40p"
+                    ng-click="onRemove(item);">
+                    <ons-icon class="fa-2x" icon="trash-o"></ons-icon>
+                </ons-button>
+                <ons-button 
+                    type="cta" 
+                    should-spin="loading"
+                    class="width-40p"
+                    ng-click="onSubmit(item);">
+                    <ons-icon class="fa-2x" icon="check"></ons-icon>
+                </ons-button>-->
+            </div> 
+        </section>
+        <div class="clear-float"></div>
+    </div>
+    </ons-scroller>
+</ons-page>

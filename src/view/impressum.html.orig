@@ -1,0 +1,39 @@
+<ons-page>
+    <div ng-class="bg" class=" bgColorLight height-100p full-width relative-layout" ng-controller="ImprintCtrl">
+
+        <section class="primary centerInParent">
+            <div class="width-space top1">
+                <div class="full-width top1" style="font-weight: bold">
+                     <img alt="" src="data/explane_logo3.png" width="150" height="40" class="top0-4"/><br>
+                     <div class="top0-4" >{{cinar.company}}</div>
+                </div>
+                <hr class="top1">
+                <div class="full-width top1" style="font-weight: bold">
+                    <address>
+                        <div>{{cinar.adress}}</div>
+                        <div>{{cinar.postal}} / {{cinar.city}}</div>
+                        <div>{{cinar.land}}</div>
+                    </address>
+                    
+                </div>
+                <hr class="top1">
+                
+                <div class="full-width top1" style="font-weight: bold">
+                    <div class="top0-4">{{cinar.ansprechpartner}}</div>
+                    <div class="top0-4">E-Mail:<a href="mailto:info@cinarsoft.net"> {{cinar.epost}}</a></div>
+                </div>
+                <hr class="top1">
+                <div class="inline top1">
+                    <span id="setAudio" class="fa-3x fa fa-phone theme" ng-click="onVolumeClick();"></span>
+                    <div>{{ lang.call }}</div>
+                </div>
+                <div class="margin-left-right20 inline">
+                </div>
+                <div class="inline top1">
+                    <span class="fa-3x fa fa-globe theme" ng-click="switchLight();"></span>
+                    <div>{{ lang.web }}</div>
+                </div>
+                <div class="clear-float"></div>
+
+        </section>
+</ons-page>

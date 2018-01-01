@@ -1,0 +1,85 @@
+<ons-page>
+    <ons-scroller>
+        <div ng-class="bg" class="bold padding10 height-100p width-100p" ng-controller="OrderDetailsCtrl">
+            <section class="primary top5">    
+                <h1 class="top1 primary">{{ input.name }}</h1>
+                <hr>
+                <section 
+                    class="full-width">
+                    <h3>Nasıl oluyor?</h3>
+                    <ons-checkbox  
+                        ng-repeat="content in contents"
+                        class="width-49p padding10 top1 theme {{ $index % 2 == 0 ? 'float-left' : 'float-right' }}"
+                        ng-true-value="{{content}}" ng-false-value=""
+                        ng-model="input.contents[$index]">
+                        {{ content}}
+                    </ons-checkbox>
+                </section>
+                <hr>
+                <div class="{{ options.length <= 1 ? 'collapse' : 'visible top3' }}"></div>
+                <section
+                    class="full-width {{ options.length <= 1 ? 'collapse' : 'visible' }}">
+                    <h3>Ek</h3>
+                    <label 
+                        ng-repeat="option in options"
+                        class="topcoat-radio-button width-49p block padding10 top1 theme padding10 {{ $index % 2 == 0 ? 'float-left' : 'float-right' }}">
+                        <input type="radio" name="option-group" ng-model="input.options" value="{{option}}">
+                        <div class="topcoat-radio-button__checkmark"></div>
+                        <span class="cSecondary">{{ option }}</span>
+                    </label>
+                    <div class='clear-float'></div>
+                </section>
+                <div class="top1"></div>
+                <section
+                    class="full-width">
+                    <h3>Paket</h3>
+                    <label 
+                        class="topcoat-radio-button width-49p block padding10 top1 theme padding10 float-left">
+                        <input type="radio" name="packet-group" ng-model="input.packet" value="false" checked="checked">
+                        <div class="topcoat-radio-button__checkmark"></div>
+                        <span class="cSecondary">Burda yenecek</span>
+                    </label>
+                    <label 
+                        class="topcoat-radio-button width-49p block padding10 top1 theme padding10 float-right">
+                        <input type="radio" name="packet-group" ng-model="input.packet" value="true">
+                        <div class="topcoat-radio-button__checkmark"></div>
+                        <span class="cSecondary">Yapilacak</span>
+                    </label>
+                    <div class='clear-float'></div>
+                </section>
+                <div class="top3"></div>
+                <section>
+                    <h3>Ücret</h3>
+                    <ons-text-input 
+                        ng-model="input.price"
+                        placeholder="Bir ücret girin" 
+                        class="full-width">
+                    </ons-text-input>
+                </section>
+                <section class="top1">
+                    <h3>Miktar</h3>
+                    <ons-text-input 
+                        ng-model="input.ordercount"
+                        placeholder="Kaç adet?" 
+                        class="full-width">
+                    </ons-text-input>
+                </section>
+                <section class="top1">
+                    <h3>Siparişi veren</h3>
+                    <ons-text-input 
+                        ng-model="input.orderer"
+                        placeholder="İsim Soyisim" 
+                        class="full-width">
+                    </ons-text-input>
+                </section>
+                <hr class="top5">
+                <div class="top3"></div>
+                <ons-button
+                    class="full-width themeContrast height-15p"
+                    ng-click="onSend();">
+                    Gönder
+                </ons-button>
+            </section>
+        </div>
+    </ons-scroller>
+</ons-page>

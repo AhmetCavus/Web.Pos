@@ -1,0 +1,159 @@
+<ons-page>
+    <div class="left bgColorLight height-100p full-width relative-layout" ng-controller="ProductsCtrl">
+        
+            <section class="header padding-left-right10 top5 full-width">
+                <form name="form" class="css-form" ng-submit="onSendProduct()" novalidate> 
+                    <ons-text-input 
+                        class="full-width"
+                        type="text"
+                        id="name"
+                        name="question"
+                        ng-model="input.name" 
+                        placeholder="Ürün ismi"
+                        ng-minlength=5
+                        ng-maxlength=100
+                        required>
+                    </ons-text-input>
+                    <div class="error" 
+                        ng-show="form.name.$dirty && form.name.$invalid">
+                        <small class="error" 
+                            ng-show="form.name.$error.required">
+                            Ürün ismi vermeniz gerekiyor
+                        </small>
+                        <small class="error" 
+                            ng-show="form.name.$error.maxlength">
+                            Cok fazla karakter girdiniz
+                        </small>
+                    </div> 
+                    <div class="top0-5"></div>
+                    <ons-text-input 
+                        class="full-width"
+                        type="text"
+                        id="answer1"
+                        name="answer1"
+                        ng-model="input.answer1" 
+                        placeholder="{{ lang.answer1Hint }}"
+                        ng-minlength=1
+                        ng-maxlength=100
+                        required>
+                    </ons-text-input>
+                    <div class="error" 
+                        ng-show="form.answer1.$dirty && form.answer1.$invalid">
+                        <small class="error" 
+                            ng-show="form.answer1.$error.required">
+                            {{ lang.errorAnswerRequired }}.
+                        </small>
+                        <small class="error" 
+                            ng-show="form.answer1.$error.maxlength">
+                             {{ lang.errorMaxLength }}
+                        </small>
+                    </div> 
+                    <div class="top0-5"></div>
+                    <ons-text-input 
+                        class="full-width"
+                        type="text"
+                        id="answer2"
+                        name="answer2"
+                        ng-model="input.answer2" 
+                        placeholder="{{ lang.answer2Hint }}"
+                        ng-minlength=1
+                        ng-maxlength=100
+                        required>
+                    </ons-text-input>
+                    <div class="error" 
+                        ng-show="form.answer2.$dirty && form.answer2.$invalid">
+                        <small class="error" 
+                            ng-show="form.answer2.$error.required">
+                            {{ lang.errorAnswerRequired }}.
+                        </small>
+                        <small class="error" 
+                            ng-show="form.answer2.$error.maxlength">
+                             {{ lang.errorMaxLength }}
+                        </small>
+                    </div> 
+                    <div class="top0-5"></div>
+                    <ons-text-input 
+                        class="full-width"
+                        type="text"
+                        id="answer3"
+                        name="answer3"
+                        ng-model="input.answer3" 
+                        placeholder="{{ lang.answer3Hint }}"
+                        ng-minlength=1
+                        ng-maxlength=100
+                        required>
+                    </ons-text-input>
+                    <div class="error" 
+                        ng-show="form.answer3.$dirty && form.answer3.$invalid">
+                        <small class="error" 
+                            ng-show="form.answer3.$error.required">
+                            {{ lang.errorAnswerRequired }}.
+                        </small>
+                        <small class="error" 
+                            ng-show="form.answer3.$error.maxlength">
+                             {{ lang.errorMaxLength }}
+                        </small>
+                    </div> 
+                    <div class="top0-5"></div>
+                    <ons-text-input 
+                        class="full-width"
+                        type="text"
+                        id="correct"
+                        name="correct"
+                        ng-model="input.correct" 
+                        placeholder="{{ lang.correctHint }}"
+                        ng-minlength=1
+                        ng-maxlength=100
+                        required>
+                    </ons-text-input>
+                    <div class="error" 
+                        ng-show="form.correct.$dirty && form.correct.$invalid">
+                        <small class="error" 
+                            ng-show="form.correct.$error.required">
+                            {{ lang.errorAnswerRequired }}.
+                        </small>
+                        <small class="error" 
+                            ng-show="form.correct.$error.maxlength">
+                             {{ lang.errorMaxLength }}
+                        </small>
+                    </div> 
+                    <div class="top0-5"></div>
+                    <ons-text-input 
+                        class="full-width"
+                        name="level"
+                        id="level"
+                        ng-model="input.level" 
+                        type="number"
+                        step="any"
+                        min="1" 
+                        max="5"
+                        placeholder="{{ lang.levelHint }}"
+                        required>
+                    </ons-text-input>
+                    <div class="error" 
+                        ng-show="form.level.$dirty && form.level.$invalid">
+                        <small class="error" 
+                            ng-show="form.level.$error.number">
+                             {{ lang.errorNumber }}
+                        </small>
+                    </div>
+                    <div class="top0-5"></div>
+                    
+                    <ons-select ng-model="input.cid" class="full-width">
+                        <option ng-repeat="categorie in categories" value="{{ categorie.id }}">
+                            {{ categorie.name }}
+                        </option>    
+                    </ons-select>
+                    
+                    <div class="top5"></div>
+                    
+                    <ons-button 
+                        class="full-width bgPrimary"
+                        should-spin="{{ loading }}"
+                        disabled="{{ form.question.$invalid || form.answer1.$invalid || form.answer2.$invalid || form.answer3.$invalid || form.correct.$invalid || form.level.$invalid }}">
+                        <ons-icon class="fa-2x" icon="check"></ons-icon>
+                    </ons-button>
+                </form>
+            </section>
+        
+</ons-page>
